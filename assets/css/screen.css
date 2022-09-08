@@ -19,12 +19,12 @@ h2 {
 	text-decoration: underline;
 }
 
-img:not(#current) {
+img:not(#current, .success img) {
 	width: 10%;
 	cursor: pointer;
 }
 
-img:hover:not(#current) {
+img:hover:not(#current, .success img) {
 	opacity: 0.5;
 }
 
@@ -68,6 +68,32 @@ form button {
 
 button[data-make] {
 	margin-top: 2rem;
+}
+
+.link-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.link-container a {
+	margin: 3rem 1.5rem 0 1.5rem;
+	text-decoration: none;
+	color: black;
+	border: 0.1rem solid black;
+	padding: 0.5rem;
+	background-color: beige;
+}
+
+.link-container a:hover {
+	background-color: azure;
+}
+
+.success img {
+	position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .hidden {

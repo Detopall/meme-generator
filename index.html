@@ -5,6 +5,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="assets/css/screen.css">
+	<script src="assets/js/handle-nav.js"></script>
 	<script src="assets/js/create-meme.js"></script>
 	<script src="assets/js/display-memes.js"></script>
 	<script src="assets/js/script.js"></script>
@@ -23,7 +24,7 @@
 			</div>
 		</article>
 
-		<article class="make-meme">
+		<article class="make-meme hidden">
 			<h2> Make meme </h2>
 			<form action="POST">
 				<label for="username"> Username </label>
@@ -40,12 +41,14 @@
 
 				<button type="submit"> Create </button>
 			</form>
-			<button data-make>Go Back</button>
+			<button data-make="return">Go Back</button>
+			<div id="current-meme">
+				
+			</div>
 		</article>
 
 		<article class="success hidden">
-			<h2> Make meme </h2>
-			<!-- add links for the url and page_url -->
+			<h2> Created meme successfully </h2>
 		</article>
 	</main>
 
