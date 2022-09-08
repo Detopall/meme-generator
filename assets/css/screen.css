@@ -28,7 +28,7 @@ img:hover {
 	opacity: 0.5;
 }
 
-#choose-meme {
+.choose-meme {
 	display: flex;
 	flex-wrap: wrap;
 }
