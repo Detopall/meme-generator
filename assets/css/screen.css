@@ -19,18 +19,55 @@ h2 {
 	text-decoration: underline;
 }
 
-img {
+img:not(#current) {
 	width: 10%;
 	cursor: pointer;
 }
 
-img:hover {
+img:hover:not(#current) {
 	opacity: 0.5;
 }
 
-.choose-meme {
+#current {
+	width: 50%;
+	position: absolute;
+	top: 9rem;
+	right: 5rem;
+}
+
+#all-memes {
 	display: flex;
 	flex-wrap: wrap;
+}
+
+form {
+	display: flex;
+	justify-content: space-evenly;
+	flex-direction: column;
+	width: 15rem;
+}
+
+label, input {
+	margin-bottom: 0.5rem;
+}
+
+button {
+	background-color: grey;
+	border: 0.1rem solid black;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+button:hover {
+	background-color: lightgray;
+}
+
+form button {
+	width: 5rem;
+}
+
+button[data-make] {
+	margin-top: 2rem;
 }
 
 .hidden {

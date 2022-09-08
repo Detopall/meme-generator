@@ -5,6 +5,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="assets/css/screen.css">
+	<script src="assets/js/create-meme.js"></script>
 	<script src="assets/js/display-memes.js"></script>
 	<script src="assets/js/script.js"></script>
 	<title>Meme Generator</title>
@@ -14,13 +15,16 @@
 	<header> Meme Generator </header>
 
 	<main>
-		<h2> Choose meme </h2>
+		
 		<article class="choose-meme">
-			<!-- add all imgs of memes in img tags-->
+			<h2> Choose meme </h2>
+			<div id="all-memes">
+				<!-- add all imgs of memes in img tags-->
+			</div>
 		</article>
 
-		<article class="make-meme hidden">
-			<h2> Make your meme </h2>
+		<article class="make-meme">
+			<h2> Make meme </h2>
 			<form action="POST">
 				<label for="username"> Username </label>
 				<input type="text" id="username" name="username" autocomplete="off" required>
@@ -29,10 +33,10 @@
 				<input type="password" id="password" name="password" autocomplete="off" required>
 
 				<label for="text0"> Top Text  </label>
-				<input type="text" id="text0" name="text0" autocomplete="off">
+				<input type="text" id="text0" name="text0" autocomplete="off" required>
 
 				<label for="text1"> Bottom Text </label>
-				<input type="text" id="text1" name="text1" autocomplete="off">
+				<input type="text" id="text1" name="text1" autocomplete="off" required>
 
 				<button type="submit"> Create </button>
 			</form>
@@ -40,7 +44,7 @@
 		</article>
 
 		<article class="success hidden">
-			<h2> You've created your meme successfully</h2>
+			<h2> Make meme </h2>
 			<!-- add links for the url and page_url -->
 		</article>
 	</main>

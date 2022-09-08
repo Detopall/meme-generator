@@ -11,7 +11,8 @@ async function init(){
 	const arrayMemes = await fetchInfo();
 	console.log(arrayMemes);
 	displayImagesOfMemes(arrayMemes);
-	document.addEventListener("click", changePage);
+	document.addEventListener("click", (e) => changePage(e, arrayMemes));
+	document.addEventListener("submit", createMeme);
 }
 
 async function fetchInfo(){
