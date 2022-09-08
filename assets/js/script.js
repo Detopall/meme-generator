@@ -5,7 +5,6 @@ const GET_MEMES_URL = "https://api.imgflip.com/get_memes";
 const POST_MEMES_URL = "https://api.imgflip.com/caption_image";
 const SELECTORS = [".choose-meme", ".make-meme", ".success"];
 let MEME = "";
-//res.data.memes
 
 async function init(){
 	const arrayMemes = await fetchInfo();

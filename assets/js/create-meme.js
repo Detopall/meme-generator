@@ -2,19 +2,19 @@
 
 let CREATED_MEME = "";
 
-async function createMeme(e){
+async function createMeme(e){ //post with data as http parameters
 	e.preventDefault();
 	const postRequest = await fetch(`${POST_MEMES_URL}${objectToQueryParams(getBodyInfo())}`);
 	const res = await postRequest.json();
 	displaySuccess(await res);
 }
 
-function objectToQueryParams(obj) {
+function objectToQueryParams(obj) { //username=username ...
 	const params = Object.entries(obj).map(([key, value]) => `${key}=${value}`);
 	return "?" + params.join("&");
 }
 
-function getBodyInfo(){
+function getBodyInfo(){ //get info from form
 	const template_id = MEME.getAttribute("data-meme");
 	const username = document.querySelector("#username").value;
 	const password = document.querySelector("#password").value;
@@ -29,7 +29,7 @@ function getBodyInfo(){
 	};
 }
 
-function displayChosenMeme(arrayMemes){
+function displayChosenMeme(arrayMemes){ //get the id of the meme chosen
 	const found = arrayMemes.find(meme => {
 		if (meme.id === MEME.getAttribute("data-meme")) return meme; 
 	});
@@ -40,7 +40,7 @@ function displayChosenMeme(arrayMemes){
 	divMeme.insertAdjacentHTML("beforeend", html);
 }
 
-function displaySuccess(res){
+function displaySuccess(res){ // display meme + 2 links
 	console.log(res);
 	addHidden();
 	document.querySelector(`${SELECTORS[2]}`).classList.remove("hidden");
@@ -49,7 +49,7 @@ function displaySuccess(res){
 		let html = `
 		<img src="${res.data.url}" title="created-meme" alt="created-meme">
 			<div class="link-container">
-				<a href="${res.data.page_url}" target="_bla,d"> Page Url </a>
+				<a href="${res.data.page_url}" target="_blank"> Page Url </a>
 				<a href="${res.data.url}" target="_blank"> Img Url </a>
 			</div>
 		`;
