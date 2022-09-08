@@ -1,0 +1,38 @@
+body {
+	font-size: 1rem;
+	font-family: 'Lucida Sans', sans-serif;
+	color: black;
+	background-color: white;
+}
+
+header {
+	font-size: 2rem;
+	display: block;
+	text-align: center;
+	margin-top: 2rem;
+}
+
+h2 {
+	display: block;
+	text-align: center;
+	font-size: 1rem;
+	text-decoration: underline;
+}
+
+img {
+	width: 10%;
+	cursor: pointer;
+}
+
+img:hover {
+	opacity: 0.5;
+}
+
+#choose-meme {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.hidden {
+	display: none;
+}
